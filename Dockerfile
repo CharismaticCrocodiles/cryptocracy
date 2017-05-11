@@ -2,6 +2,7 @@ FROM mhart/alpine-node:4
 
 # Install build tools to compile native npm modules
 RUN apk add --update build-base python
+RUN apk add git
 
 # Create app directory
 RUN mkdir -p /usr/local/deepstream/conf && mkdir -p /usr/local/deepstream/var
