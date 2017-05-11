@@ -87,7 +87,7 @@ services:
         # volumes:
         # - ../trade:/usr/local/trade
     rethinkdb-search-provider:
-        image: cryptocracy/rethinkdb-search-provider
+        image: deepstreamio/provider-search-rethinkdb:latest
         environment:
             - RETHINKDB_HOST=rethinkdb
             - DEEPSTREAM_AUTH_PASSWORD=12345
@@ -102,5 +102,5 @@ services:
         ports:
             - "28015:28015"
             - "8080:8080"
-        volumes:
-            - ./rethinkdb_data:/data/rethinkdb_data
+        # volumes:
+        #     - ./rethinkdb_data:/data/rethinkdb_data
